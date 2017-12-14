@@ -28,7 +28,7 @@ public class wddemoFirefox {
 		      System.out.println("Calc test result Is : " + result);
 		      driver.close();
 
-			Assert.assertEquals("7", result);
+			Assert.assertEquals("7", result); 
 	      
 	}
 
