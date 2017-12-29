@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 public class Metron {
@@ -27,7 +28,8 @@ public class Metron {
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		driver.close();
+		//driver.close();
+		driver.quit();
 	}
 
 	@Before
@@ -52,7 +54,7 @@ public class Metron {
 		Assert.assertEquals("Advanced Data Analytics", result);
 
 	}
-	
+	//@Ignore
 	@Test
 	public void testAMAPage(){
 
@@ -75,7 +77,6 @@ public class Metron {
 		String result = driver.findElement(By.xpath("//*[@id=\"dnn_ctr432_TITLE1_titleLabel\"]")).getText();
 		System.out.println("test result Is : " + result);
 		
-		//driver.close();
 
 		Assert.assertEquals("ORCA", result);
 

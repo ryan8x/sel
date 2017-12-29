@@ -28,7 +28,7 @@ public class Careers {
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		//driver.close();
+		//driver.quit();
 	}
 
 	@Before
@@ -93,19 +93,4 @@ public class Careers {
 
 	}
 	
-	@Ignore
-	@Test
-	public void testORCAPage(){
-
-		driver.findElement(By.xpath("/html/body/form/div[3]/div[1]/div[2]/ul/li[5]/a")).click();
-
-		String result = driver.findElement(By.xpath("//*[@id=\"dnn_ctr432_TITLE1_titleLabel\"]")).getText();
-		System.out.println("test result Is : " + result);
-		
-		//driver.close();
-
-		Assert.assertEquals("ORCA", result);
-
-	}
-
 }
